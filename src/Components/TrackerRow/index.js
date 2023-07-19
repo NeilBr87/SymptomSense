@@ -34,7 +34,7 @@ export default function TrackerRow(props) {
             color: 'white'
           }}
         >
-          Add new day
+          New day
         </button>
       )}
       {symptomClicked && <TrackerForm days={days} addNewDay={addNewDay}/>}
