@@ -21,7 +21,7 @@ export default function TrackerForm(props) {
     if (storedName) {
       setSymptomData({ ...symptomData, symptomName: storedName });
     }
-  }, []);
+  }, [symptomData]);
 
   function handleSymptomNameChange(event) {
     setSymptomData({ ...symptomData, symptomName: event.target.value });
