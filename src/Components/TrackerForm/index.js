@@ -42,8 +42,8 @@ export default function TrackerForm(props) {
   return (
     <div style={{ border: '3px groove #4D7EA8', borderRadius: '15px', padding: '15px', display: 'flex', flexDirection: 'column' }}>
       <Typography style={{ fontSize: '24px', fontWeight: 'bold', color: '#4D7EA8', textShadow: '1px 1px 0 black', marginBottom: '20px'}}>Day {props.days.length + 1}</Typography>
-      <Typography style={{ fontWeight: 'bold', marginBottom: '5px' }}>Date</Typography>
-      <input onChange={handleDateChange} type="date" id="startDate" name="startDate" style={{marginBottom: '20px'}}></input>
+      {/* <Typography style={{ fontWeight: 'bold', marginBottom: '5px' }}>Date</Typography> */}
+      {/* <input onChange={handleDateChange} type="date" id="startDate" name="startDate" style={{marginBottom: '20px'}}></input> */}
       
       {props.days.length === 0 ? ( 
         <TextField onChange={handleSymptomNameChange} value={symptomData.symptomName} id="outlined-basic" label="Symptom name" variant="outlined" />

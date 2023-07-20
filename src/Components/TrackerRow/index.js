@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import { Box } from '@material-ui/core';
 import TrackerForm from '../TrackerForm';
 import TrackerDisplay from '../TrackerDisplay';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 export default function TrackerRow(props) {
   const [symptomClicked, setSymptomClicked] = useState(false);
   const [days, setDays] = useState([]);
   const [workingDate, setWorkingDate] = useState('');
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   function handleNewSymptom() {
     setSymptomClicked(true);
@@ -23,8 +27,8 @@ export default function TrackerRow(props) {
         <button
           onClick={handleNewSymptom}
           style={{
-            width: '120px',
-            height: '110px',
+            width: isMobile? '110px' : '120px',
+            height: isMobile? '100px' : '110px',
             fontSize: '20px',
             backgroundColor: '#4D7EA8',
             borderRadius: '10px',

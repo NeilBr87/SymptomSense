@@ -1,10 +1,10 @@
-import Menu from '../Menu'; 
+import LandingPage from '../LandingPage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Menu />
+      <LandingPage />
     </div>
   );
 }
