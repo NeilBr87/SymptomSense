@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Typography } from '@material-ui/core';
 
+function formatDateToDDMMYYYY(dateString) {
+  const [year, month, day] = dateString.split('-');
+  return `${day}/${month}/${year}`;
+}
+
 export default function TrackerDisplay(props) {
   const [labelName, setLabelName] = useState('');
   const [labelDescription, setLabelDescription] = useState('');
@@ -27,6 +32,7 @@ export default function TrackerDisplay(props) {
     <div>
       <div style={{ border: '3px groove #4D7EA8', borderRadius: '15px', padding: '25px', width: '200px', display: 'flex', flexDirection: 'column' }}>
         <Typography style={{ fontSize: '24px', fontWeight: 'bold', color: '#4D7EA8', textShadow: '1px 1px 0 black'}}>Day {props.day}</Typography>
+        <Typography>Date: {formatDateToDDMMYYYY(props.workingDate)}</Typography>
         {labelName && (
           <Typography style={{ marginTop: '15px', fontWeight: 'bold' }}>{labelName}</Typography>
         )}

@@ -6,6 +6,7 @@ import TrackerDisplay from '../TrackerDisplay';
 export default function TrackerRow(props) {
   const [symptomClicked, setSymptomClicked] = useState(false);
   const [days, setDays] = useState([]);
+  const [workingDate, setWorkingDate] = useState('');
 
   function handleNewSymptom() {
     setSymptomClicked(true);
@@ -37,10 +38,10 @@ export default function TrackerRow(props) {
           New day
         </button>
       )}
-      {symptomClicked && <TrackerForm days={days} addNewDay={addNewDay}/>}
+      {symptomClicked && <TrackerForm days={days} addNewDay={addNewDay} setWorkingDate={setWorkingDate} workingDate={workingDate}/>}
       {days.map((dayData, index) => (
         <div key={index} style={{ marginTop: '20px' }}>
-          <TrackerDisplay day={index + 1} entries={dayData}/>
+          <TrackerDisplay day={index + 1} entries={dayData} workingDate={workingDate}/>
         </div>
       ))}
     </Box>
