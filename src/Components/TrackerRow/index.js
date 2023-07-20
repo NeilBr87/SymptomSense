@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Box } from '@material-ui/core';
 import TrackerForm from '../TrackerForm';
 import TrackerDisplay from '../TrackerDisplay';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -22,7 +21,7 @@ export default function TrackerRow(props) {
   }
 
   return (
-    <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '4%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '4%' }}>
       {!symptomClicked && (
         <button
           onClick={handleNewSymptom}
@@ -48,6 +47,6 @@ export default function TrackerRow(props) {
           <TrackerDisplay day={index + 1} entries={dayData} workingDate={workingDate}/>
         </div>
       ))}
-    </Box>
+    </div>
   );
 }

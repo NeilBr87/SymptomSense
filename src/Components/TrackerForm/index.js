@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { TextField, Typography } from '@material-ui/core';
+import React, { useState, useEffect} from 'react';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 
 export default function TrackerForm(props) {
   const [symptomData, setSymptomData] = useState({
@@ -8,13 +9,13 @@ export default function TrackerForm(props) {
     symptomSeverity: '',
   });
 
-  const [date, setDate] = useState('');
+  // const [date, setDate] = useState('');
 
-  function handleDateChange(event) {
-    const newDate = event.target.value;
-    setDate(newDate);
-    props.setWorkingDate(newDate); // Update parent component immediately with the new date
-  }
+  // function handleDateChange(event) {
+  //   const newDate = event.target.value;
+  //   setDate(newDate);
+  //   props.setWorkingDate(newDate); // Update parent component immediately with the new date
+  // }
   useEffect(() => {
     const storedName = localStorage.getItem('symptomName');
     if (storedName) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { Box} from '@material-ui/core';
 import TrackerRow from '../TrackerRow';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -13,9 +12,9 @@ export default function Menu() {
 
 
     return (
-        <Box style={{marginTop: isMobile? '-1%' : '5%'}}>
+        <div style={{marginTop: isMobile? '-1%' : '5%'}}>
             <p><span style={{color: 'rgb(226, 80, 65)', fontSize: isMobile? '40px' : '50px'}}>Symptom</span><span style={{color: 'white', backgroundColor: 'rgb(226, 80, 65)', fontSize: isMobile? '45px' : '55px', borderTopRightRadius: '20px', borderBottomRightRadius: '20px'}}>Sense</span></p>        
             <TrackerRow day={day} setDay={setDay} symptomClicked={symptomClicked} setSymptomClicked={setSymptomClicked} />
-        </Box>
+        </div>
     );
 }
