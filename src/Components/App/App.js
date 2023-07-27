@@ -2,7 +2,7 @@ import LandingPage from '../LandingPage';
 import './App.css';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase } from "firebase/database";
+// import { getDatabase } from "firebase/database";
 
 function App() {
 
@@ -19,10 +19,10 @@ function App() {
 
   
   const app = initializeApp(firebaseConfig);
-  // const analytics = getAnalytics(app);
+  const analytics = getAnalytics(app);
   // const database = getDatabase(app);
 
-
+  console.log(analytics)
   return (
     <div className="App">
       <LandingPage />

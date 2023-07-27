@@ -38,8 +38,8 @@ export default function SignUp() {
         e.preventDefault();
 
         // Use the input states for email and password
-        setEmail(inputEmail);
-        setPassword(inputPassword);
+        // setEmail(inputEmail);
+        // setPassword(inputPassword);
 
         createUserWithEmailAndPassword(auth, inputEmail, inputPassword)
             .then((userCredential) => {
@@ -56,8 +56,8 @@ export default function SignUp() {
 
     function handleLoginSubmit(e) {
         e.preventDefault();
-        setEmail(loginEmail);
-        setPassword(loginPassword);
+        // setEmail(loginEmail);
+        // setPassword(loginPassword);
 
         signInWithEmailAndPassword(auth, loginEmail, loginPassword) // Use the separate login email and password states
             .then((userCredential) => {
