@@ -5,8 +5,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 export default function SignUp() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
     const [loginEmail, setLoginEmail] = useState("");
@@ -43,14 +43,14 @@ export default function SignUp() {
 
         createUserWithEmailAndPassword(auth, inputEmail, inputPassword)
             .then((userCredential) => {
-                const user = userCredential.user;
+                // const user = userCredential.user;
                 setSuccessMessage(true);
                 setInputEmail("");
                 setInputPassword("");
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
             });
     }
 
@@ -62,15 +62,15 @@ export default function SignUp() {
         signInWithEmailAndPassword(auth, loginEmail, loginPassword) // Use the separate login email and password states
             .then((userCredential) => {
                 // Signed in 
-                const user = userCredential.user;
+                // const user = userCredential.user;
                 setSuccessMessage(true);
                 setLoginEmail("");
                 setLoginPassword("");
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
             });
     }
 
