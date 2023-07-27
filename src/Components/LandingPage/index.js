@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Menu from '../Menu'; 
+import SignUp from '../SignUp';
 import './style.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -59,7 +59,7 @@ export default function LandingPage() {
             </div>}
 
 
-            {loggedIn && <Menu />}
+            {loggedIn && <SignUp />}
 
         </div>
     )
